@@ -13,20 +13,41 @@ window.onload = function () {
         caja_peliculas.append(p);
     }
 
+
+
+
     var btn_agregar = document.getElementById('btn-add-movie');
 
     btn_agregar.addEventListener('click', function () {
+
+        var len = caja_peliculas.children.length -1;
+        for(var i = len ;i>0;i--){  
+            console.log(caja_peliculas.children[i].tagName);
+            if(caja_peliculas.children[i].tagName == "P"){
+                caja_peliculas.children[i].remove();
+            }
+        }
+
         var new_peli = agregarPeliculas();
         peliculas.push(new_peli);
 
-
-        var caja_peliculas = document.querySelector("#peliculas");
         var indice;
         for (indice in peliculas) {
             var p = document.createElement("p");
             p.append(peliculas[indice].titulo);
             caja_peliculas.append(p);
         }
+         
+
+        
+        // var caja_peliculas = document.querySelector("#peliculas");
+        // var indice;
+        // for (indice in peliculas) {
+            
+        //     var p = document.createElement("p");
+        //     p.append(peliculas[indice].titulo);
+        //     caja_peliculas.append(p);
+        // }
 
     });
 
