@@ -1,0 +1,36 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.form { 
+    float: left;
+    width: 250px;
+    height: 190px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.dashed {
+    border: 3px dashed grey;
+    text-align: center;
+    padding: 10px;
+}
+
+.form label {
+    display: flex; 
+    line-height: 2em; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.error-msg {
+    display: inline-block;
+    font-size: 10px;
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
